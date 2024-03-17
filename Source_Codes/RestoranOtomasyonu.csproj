@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61317B9A-6E60-494E-9725-E7235075D130}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FurkanOzden_221103052</RootNamespace>
+    <AssemblyName>FurkanOzden_221103052</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\AlertShowing.cs" />
+    <Compile Include="Class\LoginValidation.cs" />
+    <Compile Include="DAL\DatabaseModel.cs" />
+    <Compile Include="DAL\Detaylar.cs" />
+    <Compile Include="DAL\Kadro.cs" />
+    <Compile Include="DAL\Kategoriler.cs" />
+    <Compile Include="DAL\Masalar.cs" />
+    <Compile Include="DAL\Roller.cs" />
+    <Compile Include="DAL\Siparisler.cs" />
+    <Compile Include="DAL\Urunler.cs" />
+    <Compile Include="Models\Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Alert.Designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\BackGroundBlur.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormBillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormBillList.Designer.cs">
+      <DependentUpon>FormBillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormRoleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormRoleAdd.Designer.cs">
+      <DependentUpon>FormRoleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormChangePw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormChangePw.Designer.cs">
+      <DependentUpon>FormChangePw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormCheckOut.Designer.cs">
+      <DependentUpon>FormCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormPos.Designer.cs">
+      <DependentUpon>FormPos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormProductAdd.Designer.cs">
+      <DependentUpon>FormProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormStaffAdd.Designer.cs">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormTableAdd .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormTableAdd .Designer.cs">
+      <DependentUpon>FormTableAdd .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormCategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormCategoryAdd.Designer.cs">
+      <DependentUpon>FormCategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DialogAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormWaiterSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormWaiterSelect.Designer.cs">
+      <DependentUpon>FormWaiterSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FormTableSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\FormTableSelect.Designer.cs">
+      <DependentUpon>FormTableSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleView.Designer.cs">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleAdd.Designer.cs">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormRoleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormRoleView.Designer.cs">
+      <DependentUpon>FormRoleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormKitchenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormKitchenView.Designer.cs">
+      <DependentUpon>FormKitchenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormProductsView .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormProductsView .Designer.cs">
+      <DependentUpon>FormProductsView .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormStaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormStaffView.Designer.cs">
+      <DependentUpon>FormStaffView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormCategoryView.Designer.cs">
+      <DependentUpon>FormCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormTableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormTableView.Designer.cs">
+      <DependentUpon>FormTableView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Models\Alert.resx">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormBillList.resx">
+      <DependentUpon>FormBillList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormRoleAdd.resx">
+      <DependentUpon>FormRoleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormChangePw.resx">
+      <DependentUpon>FormChangePw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormCheckOut.resx">
+      <DependentUpon>FormCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormPos.resx">
+      <DependentUpon>FormPos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormProductAdd.resx">
+      <DependentUpon>FormProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormStaffAdd.resx">
+      <DependentUpon>FormStaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormTableAdd .resx">
+      <DependentUpon>FormTableAdd .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormCategoryAdd.resx">
+      <DependentUpon>FormCategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\DialogAlert.resx">
+      <DependentUpon>DialogAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormWaiterSelect.resx">
+      <DependentUpon>FormWaiterSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\FormTableSelect.resx">
+      <DependentUpon>FormTableSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SampleView.resx">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleAdd.resx">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormRoleView.resx">
+      <DependentUpon>FormRoleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormKitchenView.resx">
+      <DependentUpon>FormKitchenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormProductsView .resx">
+      <DependentUpon>FormProductsView .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormStaffView.resx">
+      <DependentUpon>FormStaffView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormCategoryView.resx">
+      <DependentUpon>FormCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormTableView.resx">
+      <DependentUpon>FormTableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\pngwing.png" />
+    <None Include="assets\deleteIcon.png" />
+    <Content Include="assets\deleteIdon.png" />
+    <Content Include="assets\icon.ico" />
+    <Content Include="assets\Logo.png" />
+    <Content Include="assets\editIcon.png" />
+    <None Include="assets\user icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
